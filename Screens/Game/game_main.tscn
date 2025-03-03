@@ -1,10 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://d1a5so46lxstx"]
+[gd_scene load_steps=9 format=3 uid="uid://d1a5so46lxstx"]
 
 [ext_resource type="PackedScene" uid="uid://cvqcr1er81hsl" path="res://Parts/Player/player_paddle.tscn" id="1_s1oq3"]
 [ext_resource type="Script" path="res://Screens/Game/game_main.gd" id="1_uaq6y"]
 [ext_resource type="PackedScene" uid="uid://dourtuu7gmnn5" path="res://Parts/Arena/Arena.tscn" id="2_ifil1"]
 [ext_resource type="PackedScene" uid="uid://pb1dk2xia2s0" path="res://Parts/Ball/Ball.tscn" id="3_tprvf"]
 [ext_resource type="PackedScene" uid="uid://c82unw7rpo6nj" path="res://Parts/Block/Block.tscn" id="4_2ywyd"]
+[ext_resource type="PackedScene" uid="uid://db63psjre6g01" path="res://Screens/Lose/lose_menu.tscn" id="6_eiod2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_uxie6"]
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_pd4t6"]
 font_color = Color(0, 0, 0, 1)
@@ -19,19 +23,6 @@ position = Vector2(208, 472)
 
 [node name="Ball" parent="." instance=ExtResource("3_tprvf")]
 position = Vector2(256, 464)
-
-[node name="Score" type="Label" parent="."]
-offset_left = 64.0
-offset_right = 256.0
-offset_bottom = 23.0
-label_settings = SubResource("LabelSettings_pd4t6")
-
-[node name="Lives" type="Label" parent="."]
-offset_left = 456.0
-offset_top = 8.0
-offset_right = 504.0
-offset_bottom = 40.0
-horizontal_alignment = 1
 
 [node name="Blocks" type="Node2D" parent="."]
 
@@ -215,5 +206,32 @@ position = Vector2(352, 128)
 [node name="Block60" parent="Blocks" instance=ExtResource("4_2ywyd")]
 position = Vector2(400, 128)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LoseMenu" parent="CanvasLayer" instance=ExtResource("6_eiod2")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 88.0
+offset_bottom = 88.0
+
+[node name="Lives" type="Label" parent="CanvasLayer"]
+offset_left = 456.0
+offset_top = 8.0
+offset_right = 504.0
+offset_bottom = 40.0
+text = "0"
+label_settings = SubResource("LabelSettings_uxie6")
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="CanvasLayer"]
+offset_left = 64.0
+offset_right = 256.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_pd4t6")
+
+[connection signal="ball_entered_lose" from="Arena" to="." method="_on_arena_ball_entered_lose"]
 [connection signal="ball_entered_lose" from="Arena" to="Ball" method="_on_arena_ball_entered_lose"]
 [connection signal="block_hit" from="Ball" to="." method="_on_ball_block_hit"]

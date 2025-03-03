@@ -25,3 +25,13 @@ Ball:
 Score:
 	A tracker of how well the player is doing, keep track of a "High-Score"
 	to allow the player to make tangible improvement in gameplay.
+
+
+Time Spent:
+	hours:minutes
+	
+	Initial Build:
+	1:45
+	
+	Menus / Losing
+	00:20
