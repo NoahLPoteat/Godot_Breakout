@@ -1,0 +1,219 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1a5so46lxstx"]
+
+[ext_resource type="PackedScene" uid="uid://cvqcr1er81hsl" path="res://Parts/Player/player_paddle.tscn" id="1_s1oq3"]
+[ext_resource type="Script" path="res://Screens/Game/game_main.gd" id="1_uaq6y"]
+[ext_resource type="PackedScene" uid="uid://dourtuu7gmnn5" path="res://Parts/Arena/Arena.tscn" id="2_ifil1"]
+[ext_resource type="PackedScene" uid="uid://pb1dk2xia2s0" path="res://Parts/Ball/Ball.tscn" id="3_tprvf"]
+[ext_resource type="PackedScene" uid="uid://c82unw7rpo6nj" path="res://Parts/Block/Block.tscn" id="4_2ywyd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pd4t6"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_uaq6y")
+
+[node name="PlayerPaddle" parent="." instance=ExtResource("1_s1oq3")]
+position = Vector2(208, 472)
+
+[node name="Arena" parent="." instance=ExtResource("2_ifil1")]
+
+[node name="Ball" parent="." instance=ExtResource("3_tprvf")]
+position = Vector2(256, 464)
+
+[node name="Score" type="Label" parent="."]
+offset_left = 64.0
+offset_right = 256.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_pd4t6")
+
+[node name="Lives" type="Label" parent="."]
+offset_left = 456.0
+offset_top = 8.0
+offset_right = 504.0
+offset_bottom = 40.0
+horizontal_alignment = 1
+
+[node name="Blocks" type="Node2D" parent="."]
+
+[node name="Block" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(88, 240)
+
+[node name="Block2" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(232, 240)
+
+[node name="Block3" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(136, 240)
+
+[node name="Block4" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(184, 240)
+
+[node name="Block5" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(280, 240)
+
+[node name="Block6" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(328, 240)
+
+[node name="Block7" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(376, 240)
+
+[node name="Block8" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(64, 224)
+
+[node name="Block9" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(208, 224)
+
+[node name="Block10" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(112, 224)
+
+[node name="Block11" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(160, 224)
+
+[node name="Block12" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(256, 224)
+
+[node name="Block13" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(304, 224)
+
+[node name="Block14" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(352, 224)
+
+[node name="Block15" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(400, 224)
+
+[node name="Block16" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(88, 208)
+
+[node name="Block17" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(232, 208)
+
+[node name="Block18" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(136, 208)
+
+[node name="Block19" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(184, 208)
+
+[node name="Block20" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(280, 208)
+
+[node name="Block21" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(328, 208)
+
+[node name="Block22" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(376, 208)
+
+[node name="Block23" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(64, 192)
+
+[node name="Block24" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(208, 192)
+
+[node name="Block25" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(112, 192)
+
+[node name="Block26" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(160, 192)
+
+[node name="Block27" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(256, 192)
+
+[node name="Block28" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(304, 192)
+
+[node name="Block29" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(352, 192)
+
+[node name="Block30" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(400, 192)
+
+[node name="Block31" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(88, 176)
+
+[node name="Block32" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(232, 176)
+
+[node name="Block33" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(136, 176)
+
+[node name="Block34" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(184, 176)
+
+[node name="Block35" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(280, 176)
+
+[node name="Block36" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(328, 176)
+
+[node name="Block37" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(376, 176)
+
+[node name="Block38" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(64, 160)
+
+[node name="Block39" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(208, 160)
+
+[node name="Block40" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(112, 160)
+
+[node name="Block41" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(160, 160)
+
+[node name="Block42" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(256, 160)
+
+[node name="Block43" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(304, 160)
+
+[node name="Block44" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(352, 160)
+
+[node name="Block45" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(400, 160)
+
+[node name="Block46" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(88, 144)
+
+[node name="Block47" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(232, 144)
+
+[node name="Block48" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(136, 144)
+
+[node name="Block49" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(184, 144)
+
+[node name="Block50" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(280, 144)
+
+[node name="Block51" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(328, 144)
+
+[node name="Block52" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(376, 144)
+
+[node name="Block53" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(64, 128)
+
+[node name="Block54" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(208, 128)
+
+[node name="Block55" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(112, 128)
+
+[node name="Block56" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(160, 128)
+
+[node name="Block57" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(256, 128)
+
+[node name="Block58" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(304, 128)
+
+[node name="Block59" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(352, 128)
+
+[node name="Block60" parent="Blocks" instance=ExtResource("4_2ywyd")]
+position = Vector2(400, 128)
+
+[connection signal="ball_entered_lose" from="Arena" to="Ball" method="_on_arena_ball_entered_lose"]
+[connection signal="block_hit" from="Ball" to="." method="_on_ball_block_hit"]

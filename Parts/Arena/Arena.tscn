@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://dourtuu7gmnn5"]
+
+[ext_resource type="Script" path="res://Parts/Arena/arena.gd" id="1_u41qg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v7css"]
+size = Vector2(512, 16)
+
+[node name="Arena" type="Node2D"]
+script = ExtResource("1_u41qg")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+
+[node name="Left" type="Polygon2D" parent="AnimatableBody2D"]
+position = Vector2(-64, 0)
+scale = Vector2(4, 21.3333)
+polygon = PackedVector2Array(16, 0, 16, 24, 32, 24, 32, 0)
+
+[node name="Top" type="Polygon2D" parent="AnimatableBody2D"]
+scale = Vector2(1, 0.375)
+polygon = PackedVector2Array(64, 0, 64, 64, 448, 64, 448, 0)
+
+[node name="Right" type="Polygon2D" parent="AnimatableBody2D"]
+position = Vector2(384, 0)
+scale = Vector2(4, 21.3333)
+polygon = PackedVector2Array(16, 0, 16, 24, 32, 24, 32, 0)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AnimatableBody2D"]
+scale = Vector2(1, 1)
+polygon = PackedVector2Array(0, 512, 64, 512, 64, 24, 448, 24, 448, 512, 512, 512, 512, 0, 0, 0)
+
+[node name="Bottom" type="Polygon2D" parent="."]
+visible = false
+position = Vector2(40, 0)
+
+[node name="LoseZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LoseZone"]
+position = Vector2(256, 528)
+shape = SubResource("RectangleShape2D_v7css")
+
+[connection signal="body_entered" from="LoseZone" to="." method="_on_lose_zone_body_entered"]
